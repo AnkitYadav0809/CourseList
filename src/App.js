@@ -9,6 +9,7 @@ import Card from './Component/Card';
 import Cards from './Component/Cards';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 const App = () => {
   
   const [courses , setCourses] = useState(null);
@@ -35,11 +36,11 @@ const App = () => {
     fetchData(); }, []
   )
   return (
-    <div className="min-h-screen flex-col flex bg-black">
+    <div className="min-h-screen flex-col flex bg-slate-950">
     <div>
       <Navbar></Navbar>
     </div>
-    <div className="bg-black">
+    <div className="bg-slate-950">
       <Filter filterData={filterData} category ={category } setCategory={setCategory}> </Filter>
     </div>
     <div className="w-11/12 max-w-[1200px] min-h-[50vh] mx-auto flex flex-wrap justify-center items-center">
