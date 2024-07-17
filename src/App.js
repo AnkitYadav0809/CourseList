@@ -35,14 +35,14 @@ const App = () => {
     fetchData(); }, []
   )
   return (
+    <div className="min-h-screen flex-col flex bg-black">
     <div>
-    <div>
-      <Navbar/>
+      <Navbar></Navbar>
     </div>
-    <div>
+    <div className="bg-black">
       <Filter filterData={filterData} category ={category } setCategory={setCategory}> </Filter>
     </div>
-    <div>
+    <div className="w-11/12 max-w-[1200px] min-h-[50vh] mx-auto flex flex-wrap justify-center items-center">
       {
       loading ? (<Spinner></Spinner>) : (<Cards courses={courses} category={category}></Cards>)
       }

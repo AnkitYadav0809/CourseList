@@ -15,7 +15,7 @@ const Card = (props) => {
         toast.warning("like removed");
     }
     else{
-        if(likedCourses.length==0)
+        if(likedCourses.length===0)
         {
 setLikedCourses([course.id]);
         }
@@ -27,11 +27,11 @@ setLikedCourses((prev)=> [...prev, course.id]);
 
   }
   return (
-    <div>
-      <div>
+    <div className='bg-bgDark bg-opacity-80 w-[300px] rounded-md overflow-hidden'>
+      <div className='relative'>
         <img src= {course.image.url}/>
-      </div>
-      <div>
+      
+      <div className='rounded-full w-[40px] h-[40px] bg-white absolute right-2 bottom-[-12px] grid place-items-center'>
         <button onClick={clickHandler}>
           {
             likedCourses.includes(course.id) ?
@@ -41,9 +41,11 @@ setLikedCourses((prev)=> [...prev, course.id]);
           }
         </button>
       </div>
-      <div>
-        <p>{course.title}</p>
-        <p>
+      </div>
+      
+      <div className='p-4'>
+        <p className='text-white text-lg font-semibold leading-6'>{course.title}</p>
+        <p className='mt-2 text-white'>
             {
             course.description.length>100 ? (course.description.substr(0,100)) + "...." : (course.description)
             }</p>
