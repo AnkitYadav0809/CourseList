@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { apiUrl , filterData } from './data';
 import Navbar from './Component/Navbar'
 import Filter from './Component/Filter';
-// import { useState , useEffect } from 'react';
-///import { useEffect } from 'react';
+
 import Spinner from './Component/Spinner';
 import Card from './Component/Card';
 import Cards from './Component/Cards';
