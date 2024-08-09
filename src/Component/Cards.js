@@ -5,8 +5,7 @@ import Card from './Card';
 const Cards = (props) => {
   let courses = props.courses;
   let category = props.category;
-  //let likedCourses= props.likedCourses;
-  //let setLikedCourses= props.setLikedCourses;
+  
   const [likedCourses , setLikedCourses] = useState([])
   function getCourse()
   {
